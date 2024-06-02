@@ -1,7 +1,7 @@
 package com.equipatour.coreservice.core.profilemanagement.controller;
 
 import com.equipatour.coreservice.core.profilemanagement.beans.UserBean;
-import com.equipatour.coreservice.core.profilemanagement.service.UserService;
+import com.equipatour.coreservice.core.profilemanagement.service.impl.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.log4j.Log4j2;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
 //    @Autowired
 //    private Gson gson;
