@@ -1,5 +1,6 @@
 package com.equipatour.coreservice.assets.domain.model;
 
+import com.equipatour.coreservice.assets.resources.requests.CreateScaleRequestDto;
 import com.equipatour.coreservice.shared.domain.model.AuditModel;
 import jakarta.persistence.*;
 import lombok.*;
@@ -31,4 +32,9 @@ public class WeightBalance extends AuditModel {
 
     @Column(name = "number")
     private String number;
+
+    public WeightBalance(CreateScaleRequestDto createScaleRequestDto) {
+        this.number = createScaleRequestDto.getNumber();
+        this.serie = createScaleRequestDto.getSerie();
+    }
 }

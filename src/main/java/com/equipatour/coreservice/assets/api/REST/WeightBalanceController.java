@@ -1,10 +1,12 @@
 package com.equipatour.coreservice.assets.api.REST;
 
+import com.equipatour.coreservice.assets.api.transformation.CreateScaleCommandFromRequestDtoAssembler;
 import com.equipatour.coreservice.assets.api.transformation.UpdateWeightBalanceCommandFromRequestDtoAssembler;
 import com.equipatour.coreservice.assets.domain.model.WeightBalance;
 import com.equipatour.coreservice.assets.domain.queries.GetWeightBalanceByIdQuery;
 import com.equipatour.coreservice.assets.domain.services.WeightBalanceCommandService;
 import com.equipatour.coreservice.assets.mapper.IOTMapper;
+import com.equipatour.coreservice.assets.resources.requests.CreateScaleRequestDto;
 import com.equipatour.coreservice.assets.resources.requests.WeightBalanceRequestDto;
 import com.equipatour.coreservice.assets.resources.summaries.WeightBalanceSummaryDto;
 import com.equipatour.coreservice.shared.constants.HeaderConstants;
@@ -48,6 +50,14 @@ public class WeightBalanceController {
                                                 HttpServletResponse response) {
         WeightBalance balance =
                 weightBalanceCommandService.handle(UpdateWeightBalanceCommandFromRequestDtoAssembler.toCommandFromDto(balanceId, requestDto));
+        response.setHeader(HeaderConstants.MESSAGES, WEIGHT_BALANCE_UPDATED);
+        return iotMapper.balanceToSummaryDto(balance);
+    }
+    @PostMapping("create-balance")
+    @Operation(summary = "Crear balanza", description = "Permite crear una la balanza.")
+    public WeightBalanceSummaryDto createBalance(@RequestBody @Valid CreateScaleRequestDto requestDto,
+                                                 HttpServletResponse response) {
+        WeightBalance balance = weightBalanceCommandService.handle(CreateScaleCommandFromRequestDtoAssembler.toCommandFromDto(requestDto));
         response.setHeader(HeaderConstants.MESSAGES, WEIGHT_BALANCE_UPDATED);
         return iotMapper.balanceToSummaryDto(balance);
     }

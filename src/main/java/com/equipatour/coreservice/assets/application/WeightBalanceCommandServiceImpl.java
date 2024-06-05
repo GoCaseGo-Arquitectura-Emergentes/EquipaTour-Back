@@ -1,5 +1,6 @@
 package com.equipatour.coreservice.assets.application;
 
+import com.equipatour.coreservice.assets.domain.commands.CreateScaleCommand;
 import com.equipatour.coreservice.assets.domain.commands.UpdateWeightCommand;
 import com.equipatour.coreservice.assets.domain.model.WeightBalance;
 import com.equipatour.coreservice.assets.domain.queries.GetWeightBalanceByIdQuery;
@@ -31,6 +32,13 @@ public class WeightBalanceCommandServiceImpl implements WeightBalanceCommandServ
     public WeightBalance handle(GetWeightBalanceByIdQuery command) {
         WeightBalance weightBalance = weightBalanceRepository.findById(command.id())
                 .orElseThrow(() -> new ResourceNotFoundException("WeightBalance not found with id: " + command.id()));
+        return weightBalance;
+    }
+
+    @Override
+    public WeightBalance handle(CreateScaleCommand commandFromDto) {
+        WeightBalance weightBalance = new WeightBalance(commandFromDto.requestDto());
+        weightBalanceRepository.save(weightBalance);
         return weightBalance;
     }
 }
