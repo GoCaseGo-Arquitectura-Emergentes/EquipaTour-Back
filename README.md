@@ -12,7 +12,7 @@ Además, se encarga de gestionar y procesar las consultas de los usuarios de man
 <h2 id="contributors"> Contributors 🤝 </h2>
 
 **GitHub**: <a href="https://github.com/EcoCharlie">@EcoCharlie</a> <br>
-**GitHub**: <a href="https://github.com/NicolePT">@NicolPT</a> <br>
+**GitHub**: <a href="https://github.com/NicolePT">@NicolePT</a> <br>
 **GitHub**: <a href="https://github.com/integrante3">@integrante3</a> <br>
 **GitHub**: <a href="https://github.com/integrante4">@integrante4</a> <br>
 **GitHub**: <a href="https://github.com/integrante5">@integrante5</a> <br>
