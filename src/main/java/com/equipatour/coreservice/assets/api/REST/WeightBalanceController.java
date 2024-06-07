@@ -23,7 +23,7 @@ import static com.equipatour.coreservice.shared.messages.ConfigurationMessages.W
 @RestController
 @RequestMapping("/api/v1/weight-balances")
 @Tag(name="Weight Sensors Controller")
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class WeightBalanceController {
 
     private final WeightBalanceCommandService weightBalanceCommandService;
