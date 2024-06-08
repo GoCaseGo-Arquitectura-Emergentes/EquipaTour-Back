@@ -1,6 +1,5 @@
 package com.equipatour.coreservice.core.vehiclemanagement.domain.model;
 
-import com.equipatour.coreservice.core.tourmanagement.resources.requests.CreateTourPackageRequestDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.equipatour.coreservice.core.vehiclemanagement.resources.requests.CreateVehicleRequestDto;
 import com.equipatour.coreservice.shared.domain.model.VehicleStatus;
