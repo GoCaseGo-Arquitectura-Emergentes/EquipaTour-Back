@@ -47,13 +47,13 @@ public class TourPackageController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Obtener Paquete Turístico", description = "Permite ver paquete turístico.")
-    public TourPackageSummaryDto getTemperature(@Parameter @PathVariable("id") Long id) {
+    public TourPackageSummaryDto getTourPackage(@Parameter @PathVariable("id") Long id) {
         TourPackage tourPackage = tourPackageCommandService.handle(new GetTourPackageByIdQuery(id));
         return tourMapper.tourPackageToSummaryDto(tourPackage);
     }
 
     @PostMapping("create-tourPackage")
-    @Operation(summary = "Crear balanza", description = "Permite crear una la balanza.")
+    @Operation(summary = "Crear Paquete Turístico", description = "Permite crear un paquete turístico.")
     public TourPackageSummaryDto createTourPackage(@RequestBody @Valid CreateTourPackageRequestDto requestDto,
                                                  HttpServletResponse response) {
         TourPackage tourPackage = tourPackageCommandService.handle(CreateTourPackageCommandFromRequestDtoAssembler.toCommandFromDto(requestDto));
@@ -63,7 +63,7 @@ public class TourPackageController {
 
     @PutMapping("/update-tour-package/{id}")
     @Operation(summary = "Actualizar Paquete Turístico", description = "Permite actualizar el paquete turístico.")
-    public TourPackageSummaryDto updateWeight(@Parameter @PathVariable("id") Long id,
+    public TourPackageSummaryDto updateTourPackage(@Parameter @PathVariable("id") Long id,
                                               @RequestBody @Valid TourPackageRequestDto requestDto,
                                               HttpServletResponse response) {
         TourPackage tourPackage =
