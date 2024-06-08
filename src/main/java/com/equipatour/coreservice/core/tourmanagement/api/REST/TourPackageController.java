@@ -25,7 +25,7 @@ import static com.equipatour.coreservice.shared.messages.ConfigurationMessages.*
 
 @RestController
 @RequestMapping("/api/v1/tour-package")
-@Tag(name="Tour Package Controller")
+@Tag(name="Tour Package Controller", description = "Controlador de paquetes turísticos.")
 public class TourPackageController {
 
     private final TourPackageCommandService tourPackageCommandService;
