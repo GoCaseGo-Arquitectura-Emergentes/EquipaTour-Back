@@ -8,6 +8,7 @@ import com.equipatour.coreservice.assets.domain.queries.GetWeightBalanceByIdQuer
 
 public interface WeightBalanceCommandService {
     WeightBalance handle(UpdateWeightCommand command);
+
     WeightBalance handle(GetWeightBalanceByIdQuery command);
 
     WeightBalance handle(CreateScaleCommand commandFromDto);

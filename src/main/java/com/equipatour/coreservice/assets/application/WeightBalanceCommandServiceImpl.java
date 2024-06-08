@@ -30,9 +30,8 @@ public class WeightBalanceCommandServiceImpl implements WeightBalanceCommandServ
 
     @Override
     public WeightBalance handle(GetWeightBalanceByIdQuery command) {
-        WeightBalance weightBalance = weightBalanceRepository.findById(command.id())
+        return weightBalanceRepository.findById(command.id())
                 .orElseThrow(() -> new ResourceNotFoundException("WeightBalance not found with id: " + command.id()));
-        return weightBalance;
     }
 
     @Override
