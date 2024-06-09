@@ -11,9 +11,9 @@ Además, se encarga de gestionar y procesar las consultas de los usuarios de man
 
 <h2 id="contributors"> Contributors 🤝 </h2>
 
-**GitHub**: <a href="https://github.com/EcoCharlie">@EcoCharlie</a> <br>
-**GitHub**: <a href="https://github.com/integrante2">@integrante2</a> <br>
+**GitHub**: <a href="https://github.com/EcoCharlie">@ErikcCortez</a> <br>
 **GitHub**: <a href="https://github.com/ErikRomeroPolli)">@ErikRomero</a> <br>
-**GitHub**: <a href="https://github.com/integrante4">@integrante4</a> <br>
-**GitHub**: <a href="https://github.com/integrante5">@integrante5</a> <br>
+**GitHub**: <a href="https://github.com/NicolePT">@NicolePT</a> <br>
+**GitHub**: <a href="https://github.com/integrante3">@integrante1</a> <br>
+**GitHub**: <a href="https://github.com/integrante3">@integrante2</a> <br>
 
