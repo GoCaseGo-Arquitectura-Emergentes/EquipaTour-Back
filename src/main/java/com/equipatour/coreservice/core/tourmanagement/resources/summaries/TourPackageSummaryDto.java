@@ -9,6 +9,9 @@ import lombok.Setter;
 @Schema(description = "Tour Package (Summary)")
 public class TourPackageSummaryDto {
 
+    @Schema(description = "Id del paquete")
+    private Long id;
+
     @Schema(description = "Nombre del paquete")
     private String packageName;
 

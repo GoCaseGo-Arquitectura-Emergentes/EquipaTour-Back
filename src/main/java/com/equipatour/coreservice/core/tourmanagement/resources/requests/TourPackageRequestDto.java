@@ -7,6 +7,9 @@ import lombok.Getter;
 @Schema(description = "Tour Package (Request)")
 public class TourPackageRequestDto {
 
+    @Schema(description = "Id del paquete")
+    private Long id;
+
     @Schema(description = "Nombre del guía")
     private String guideName;
 

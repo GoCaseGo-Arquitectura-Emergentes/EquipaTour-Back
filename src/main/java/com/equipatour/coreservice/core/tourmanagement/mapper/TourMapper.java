@@ -12,6 +12,7 @@ import java.util.List;
 public interface TourMapper {
 
     @Mappings({
+            @Mapping(target = "id", source = "entity.id"),
             @Mapping(target = "availableSlots", source = "entity.availableSlots"),
             @Mapping(target = "packageName", source = "entity.packageName"),
             @Mapping(target = "guideName", source = "entity.guideName")
