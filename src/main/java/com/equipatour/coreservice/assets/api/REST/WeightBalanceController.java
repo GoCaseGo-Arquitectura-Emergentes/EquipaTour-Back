@@ -41,7 +41,6 @@ public class WeightBalanceController {
         WeightBalance balance = weightBalanceCommandService.handle(new GetWeightBalanceByIdQuery(balanceId));
         return iotMapper.balanceToSummaryDto(balance);
     }
-
     @PutMapping("/update-weight/{balanceId}")
     @Operation(summary = "Actualizar Peso", description = "Permite actualizar el peso de la balanza.")
     public WeightBalanceSummaryDto updateWeight(@Parameter @PathVariable("balanceId") Long balanceId,
