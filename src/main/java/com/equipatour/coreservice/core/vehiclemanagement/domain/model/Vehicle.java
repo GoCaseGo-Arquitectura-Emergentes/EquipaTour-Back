@@ -42,6 +42,9 @@ public class Vehicle extends AuditModel {
     @Column(name = "vehicleSeats")
     private Long vehicleSeats;
 
+    @Column(name = "vehicleAgency")
+    private String vehicleAgency;
+
     public Vehicle(CreateVehicleRequestDto createVehicleRequestDto) {
         this.vehicleState = createVehicleRequestDto.getVehicleState();
         this.vehicleModel = createVehicleRequestDto.getVehicleModel();
@@ -49,5 +52,6 @@ public class Vehicle extends AuditModel {
         this.vehicleWeight = createVehicleRequestDto.getVehicleWeight();
         this.vehicleDriver = createVehicleRequestDto.getVehicleDriver();
         this.vehicleSeats = createVehicleRequestDto.getVehicleSeats();
+        this.vehicleAgency = createVehicleRequestDto.getVehicleAgency();
     }
 }

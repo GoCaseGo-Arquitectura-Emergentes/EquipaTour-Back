@@ -39,6 +39,7 @@ public class VehicleCommandServiceImpl implements VehicleCommandService {
         vehicle.setVehicleWeight(command.requestDto().getVehicleWeight());
         vehicle.setVehicleDriver(command.requestDto().getVehicleDriver());
         vehicle.setVehicleSeats(command.requestDto().getVehicleSeats());
+        vehicle.setVehicleAgency(command.requestDto().getVehicleAgency());
         vehicleRepository.save(vehicle);
         return vehicle;
     }

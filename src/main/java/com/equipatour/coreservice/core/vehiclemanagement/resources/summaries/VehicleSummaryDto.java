@@ -27,4 +27,7 @@ public class VehicleSummaryDto {
 
     @Schema(description = "Numero de asientos")
     private Long vehicleSeats;
+
+    @Schema(description = "A que agencia pertenece")
+    private String vehicleAgency;
 }

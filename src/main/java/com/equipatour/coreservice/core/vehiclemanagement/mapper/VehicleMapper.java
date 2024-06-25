@@ -17,7 +17,8 @@ public interface VehicleMapper {
             @Mapping(target = "vehicleBrand", source = "entity.vehicleBrand"),
             @Mapping(target = "vehicleWeight", source = "entity.vehicleWeight"),
             @Mapping(target = "vehicleDriver", source = "entity.vehicleDriver"),
-            @Mapping(target = "vehicleSeats", source = "entity.vehicleSeats")
+            @Mapping(target = "vehicleSeats", source = "entity.vehicleSeats"),
+            @Mapping(target = "vehicleAgency", source = "entity.vehicleAgency")
 
     })
     VehicleSummaryDto vehicleToSummaryDto(Vehicle entity);
