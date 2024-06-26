@@ -14,7 +14,7 @@ public class WebConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:4200") // Allow your frontend domain
+                        .allowedOrigins("http://localhost:4200", "https://equipatour-app.web.app/") // Allow your frontend domain
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD") // Specify allowed methods
                         .allowedHeaders("*") // Allow any headers
                         .allowCredentials(true); // Allow credentials
