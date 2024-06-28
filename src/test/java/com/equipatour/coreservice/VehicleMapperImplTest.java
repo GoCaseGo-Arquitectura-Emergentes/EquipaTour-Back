@@ -5,15 +5,27 @@ import com.equipatour.coreservice.core.vehiclemanagement.resources.summaries.Veh
 import com.equipatour.coreservice.shared.domain.model.VehicleStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.equipatour.coreservice.core.vehiclemanagement.mapper.VehicleMapperImpl;
+import com.equipatour.coreservice.core.vehiclemanagement.mapper.VehicleMapper;
+
+import java.util.List;
 
 public class VehicleMapperImplTest {
 
-    private VehicleMapperImpl vehicleMapper;
+    private VehicleMapper vehicleMapper;
 
     @BeforeEach
     public void setUp() {
-        vehicleMapper = new VehicleMapperImpl();
+        vehicleMapper = new VehicleMapper() {
+            @Override
+            public VehicleSummaryDto vehicleToSummaryDto(Vehicle entity) {
+                return null;
+            }
+
+            @Override
+            public List<VehicleSummaryDto> vehicleToSummaryDtos(List<Vehicle> entities) {
+                return null;
+            }
+        };
     }
 
     @Test

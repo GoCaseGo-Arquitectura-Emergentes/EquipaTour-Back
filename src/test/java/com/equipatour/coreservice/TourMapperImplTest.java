@@ -4,15 +4,27 @@ import com.equipatour.coreservice.core.tourmanagement.domain.model.TourPackage;
 import com.equipatour.coreservice.core.tourmanagement.resources.summaries.TourPackageSummaryDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.equipatour.coreservice.core.tourmanagement.mapper.TourMapperImpl;
+import com.equipatour.coreservice.core.tourmanagement.mapper.TourMapper;
+
+import java.util.List;
 
 public class TourMapperImplTest {
 
-    private TourMapperImpl tourMapper;
+    private TourMapper tourMapper;
 
     @BeforeEach
     public void setUp() {
-        tourMapper = new TourMapperImpl();
+        tourMapper = new TourMapper() {
+            @Override
+            public TourPackageSummaryDto tourPackageToSummaryDto(TourPackage entity) {
+                return null;
+            }
+
+            @Override
+            public List<TourPackageSummaryDto> tourPackageToSummaryDtos(List<TourPackage> entities) {
+                return null;
+            }
+        };
     }
 
     @Test
