@@ -1,4 +1,4 @@
-# Core-Service v.0.0.1-SNAPSHOT 🧠
+# EquipaTour.Api
 
 ---
 
@@ -14,6 +14,3 @@ Además, se encarga de gestionar y procesar las consultas de los usuarios de man
 **GitHub**: <a href="https://github.com/EcoCharlie">@ErikcCortez</a> <br>
 **GitHub**: <a href="https://github.com/ErikRomeroPolli)">@ErikRomero</a> <br>
 **GitHub**: <a href="https://github.com/NicolePT">@NicolePT</a> <br>
-**GitHub**: <a href="https://github.com/integrante3">@integrante1</a> <br>
-**GitHub**: <a href="https://github.com/integrante3">@integrante2</a> <br>
-
